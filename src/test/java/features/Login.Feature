@@ -1,5 +1,6 @@
 Feature: Login Quarto
 
+  @login-valid
   Scenario: I want to login with valid user info
     Then I have entered the user login info
     And I tap on login button
