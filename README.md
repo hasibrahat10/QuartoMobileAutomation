@@ -3,8 +3,12 @@
 
 ### Description
 
-This is a Software Application testing automation project based on Java. Apache Maven is used to building and run the
-project and Cucumber-Gherkin is used for writing test scenarios and reporting. Web Apps: https://quartolab.com/ & Available in PlayStore and App store
+This is a Software Application testing automation project based on Java. 
+Apache Maven is used to building and run the
+project and Cucumber-Gherkin is used for writing test scenarios and reporting. 
+Web Apps: https://quartolab.com/ & 
+Available in PlayStore(https://play.google.com/store/apps/details?id=com.redlime.quarto&hl=en)
+and App store
 
 ### Setup Project
 
