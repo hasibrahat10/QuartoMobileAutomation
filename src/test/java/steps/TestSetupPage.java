@@ -5,7 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import sun.security.pkcs11.wrapper.Constants;
+
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -21,13 +21,13 @@ public class TestSetupPage {
 
     protected static void startDriver() {
         try {
-            caps.setCapability(MobileCapabilityType.DEVICE_NAME, "");
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME, "POCO C3");
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
-            caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "15000");
+            caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "20000");
             caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "");
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
             caps.setCapability(MobileCapabilityType.APP, FileHelper.USER_DIR + "/app/app-release.apk");
-            caps.setCapability(MobileCapabilityType.FULL_RESET, "true");
+            caps.setCapability(MobileCapabilityType.FULL_RESET, "False");
 
             caps.setCapability(MobileCapabilityType.NO_RESET, "false");
             caps.setCapability("name", REMOTE_TEST ? scenarioName : null);

@@ -5,6 +5,36 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import steps.TestSetupPage;
 
 public class LoginPage extends BasePage {
-    @AndroidFindBy(id = "borno_porichoi")
-    public MobileElement b_Poricoi;
+    @AndroidFindBy(xpath = "//*[contains(@text, 'Email address')]")
+    public MobileElement emailAddress;
+
+@AndroidFindBy(xpath = "//*[contains(@text, 'Password')]")
+    public MobileElement password;
+
+@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"LOGIN\"]")
+    public MobileElement login;
+@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Good Morning\"]\n")
+    public MobileElement textDisplayed;
+
+
+public void loginInfo(){
+    emailAddress.click();
+    emailAddress.sendKeys("tlive5@yopmail.com");
+    password.click();
+    password.sendKeys("t12345678");
+    sleepForSeconds(4);
+}
+
+public void clickLogin(){
+    login.click();
+    sleepForMilliSeconds(5);
+}
+
+    public String setTextDisplayed() {
+        sleepFor(3);
+        return textDisplayed.getText();
+    }
+
+
+
 }
