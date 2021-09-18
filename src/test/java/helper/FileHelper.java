@@ -15,6 +15,9 @@ public class FileHelper extends TestSetupPage {
     public static final String SCREENSHOT_DIR = USER_DIR + "/target/screenshot/";
     public static String DATA_FOLDER = USER_DIR + "/data/";
 
+    /**
+     * Screenshot Helper
+     */
     public static void take_screenshot() {
         File screenshot_file;
         GregorianCalendar cal = new GregorianCalendar();
@@ -31,6 +34,11 @@ public class FileHelper extends TestSetupPage {
         }
     }
 
+    /**
+     *
+     * @param scenario_name This will take scenario name as screenshot name
+     * @return clean the duplicate name and replace new name
+     */
     private static String clean_string(String scenario_name) {
         return scenario_name.replaceAll("[-()#.,]", "").replaceAll("[/ :]", "_");
     }

@@ -6,7 +6,6 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +18,10 @@ public class TestSetupPage {
     protected static boolean REMOTE_TEST;
     private static DesiredCapabilities caps = new DesiredCapabilities();
 
+    /**
+     * Mobile Capabilities Setup
+     * Appium Driver Decorated
+     */
     protected static void startDriver() {
         try {
             caps.setCapability(MobileCapabilityType.DEVICE_NAME, "POCO C3");

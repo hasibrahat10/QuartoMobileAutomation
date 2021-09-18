@@ -5,6 +5,9 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import helper.FileHelper;
 
+/**
+ * Start and Stop Driver
+ */
 public class Hooks extends TestSetupPage {
     @Before
     public void setUpDriver(Scenario scenario) {
@@ -13,7 +16,7 @@ public class Hooks extends TestSetupPage {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         FileHelper.take_screenshot();
         stopDriver();
     }

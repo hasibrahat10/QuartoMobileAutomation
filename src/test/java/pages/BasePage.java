@@ -25,6 +25,10 @@ public class BasePage extends TestSetupPage {
             .pollingEvery(Duration.ofMillis(400))
             .ignoring(NoSuchElementException.class, NullPointerException.class);
 
+    /**
+     * Appium Page Factory Driver From BasePage
+     * Sleep Timer
+     */
     public BasePage() {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -93,14 +97,16 @@ public class BasePage extends TestSetupPage {
 
     public void patientlyScrollMobile(String selectorType, String selectorValue, int count) {
 
-        for(int j =0; j<count; j++){ swipeDown();}
+        for (int j = 0; j < count; j++) {
+            swipeDown();
+        }
         String elementXpath = "";
         if (selectorType.equals("text")) {
             elementXpath = "//*[contains(@text,'" + selectorValue + "')]";
         } else {
             elementXpath = "//*[@" + selectorType + "='" + selectorValue + "')]";
         }
-        for (int i = 0; i < (count*2); i++) {
+        for (int i = 0; i < (count * 2); i++) {
             try {
                 if (driver.findElement(By.xpath(elementXpath)).isDisplayed()) {
                     break;
