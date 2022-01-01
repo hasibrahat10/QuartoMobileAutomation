@@ -30,7 +30,7 @@ public class LoginPage extends BasePage {
     }
 
     public String setTextDisplayed() {
-        sleepFor(3);
+        sleepFor(5);
         return textDisplayed.getText();
     }
 

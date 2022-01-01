@@ -35,6 +35,7 @@ public class TestSetupPage {
             caps.setCapability(MobileCapabilityType.NO_RESET, "false");
             caps.setCapability("name", REMOTE_TEST ? scenarioName : null);
 
+
             Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
